@@ -5,6 +5,14 @@ const articuloSchema = new Schema({
         type: String,
         required: true
     },
+    details: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: String,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now
@@ -12,3 +20,5 @@ const articuloSchema = new Schema({
 },{
     timestamps: true
 })
+
+module.exports = model('Articulo', articuloSchema)

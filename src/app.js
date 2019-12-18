@@ -10,8 +10,6 @@ app.use(cors())
 app.use(express.json())
 
 // Routes
-app.get('/', (req, res) =>{
-    res.send('Hola mundo')
-})
+app.use('/api/articulo', require('./routes/articulo'))
 
 module.exports = app
